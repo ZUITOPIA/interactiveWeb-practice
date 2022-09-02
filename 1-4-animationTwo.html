@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web</title>
+    <style>
+      @keyframes move {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(200px, 0);
+          /* x축으로 500px 이동, y축으로 0px 이동 */
+          background: red;
+        }
+        100% {
+          transform: translate(400px, 300px);
+          /* x축으로 700px 이동, y축으로 500px 이동 */
+        }
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border: 2px solid #000;
+        background: #fff000;
+        animation: move 3s linear forwards;
+        /* animation-direction: alternate; 진행된 동작 그대로 되돌아가기
+        animation-direction: reverse; 애니메이션 동작을 맨 끝 지점에서 시작하기 
+
+        기본 : 애니메이션이 끝나면 다시 처음으로 돌아감
+        animation-fill-mode: forwards; 로 멈춘 지점에 머무르도록 */
+      }
+      .box:hover {
+        animation-play-state: paused;
+        /* 박스 위에 마우스 올리면 얼음 ! */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Animation</h1>
+    <div class="box">BOX</div>
+  </body>
+</html>
