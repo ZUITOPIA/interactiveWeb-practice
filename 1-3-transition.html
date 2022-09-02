@@ -1,0 +1,87 @@
+<!-- option + B : html browser 실행 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .box-container {
+        display: flex;
+      }
+      .boxOne {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background: rgba(255, 255, 0, 0.7);
+
+        transition: 1s;
+        /* 1초 동안 애니메이션 진행함 (아래 4가지 경우 기본 설정되어있음)
+        transition-property: all; 모든 요소에 transition 을 사용함
+        transition-duration: 1s; 동작 재생 시간을 1초로 설정함
+        transition-timing-function: ease; 가속도 있게 변경함
+        transition-timing-function: linear; 등속도로 변경함
+        개발자도구 ease 앞에 있는 버튼(Open cubic bezier editor) 클릭하면 더 자유로운 속도 조절 가능 !!!!
+        transition-delay: 2s; 2초 후에 동작을 진행함 */
+      }
+      .boxOne:hover {
+        transform: scale(2);
+        background: white;
+      }
+      .boxTwo {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background: rgba(255, 255, 0, 0.7);
+
+        transition: 1s;
+      }
+      .boxTwo:hover {
+        width: 200px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transform</h1>
+    <p>
+      <!-- lorem 입력하면 자동 문장 생성 -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi amet nobis
+      pariatur magni temporibus maiores, neque dolores consequuntur corrupti?
+      Ex, tenetur suscipit? Tempore quae iusto necessitatibus facere, eaque rem
+      doloremque id itaque obcaecati excepturi adipisci minus aliquid quod
+      maiores, laborum recusandae cupiditate provident a asperiores
+      reprehenderit, esse temporibus. Amet laborum perspiciatis id tenetur sed
+      et magnam quasi, natus impedit minus obcaecati esse illo dolorem incidunt
+      in ipsam facilis omnis quae. Tenetur eaque repellendus quo adipisci, est
+      ad corporis doloribus? In perferendis beatae, similique eaque, sapiente
+      molestiae quibusdam ea culpa ipsa, explicabo eligendi illum veniam aut
+      dolores impedit eos nostrum obcaecati?
+    </p>
+    <div class="box-container">
+      <div class="boxOne">A</div>
+      <div class="boxOne">B</div>
+      <div class="boxOne">C</div>
+      <!-- 하얀색으로 변하면서 확대되는 박스 확인 가능 -->
+      <div class="boxTwo">D</div>
+      <div class="boxTwo">E</div>
+      <div class="boxTwo">F</div>
+      <!-- 빨간색으로 변하면서 옆으로 늘어나는 박스 확인 가능 -->
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi amet nobis
+      pariatur magni temporibus maiores, neque dolores consequuntur corrupti?
+      Ex, tenetur suscipit? Tempore quae iusto necessitatibus facere, eaque rem
+      doloremque id itaque obcaecati excepturi adipisci minus aliquid quod
+      maiores, laborum recusandae cupiditate provident a asperiores
+      reprehenderit, esse temporibus. Amet laborum perspiciatis id tenetur sed
+      et magnam quasi, natus impedit minus obcaecati esse illo dolorem incidunt
+      in ipsam facilis omnis quae. Tenetur eaque repellendus quo adipisci, est
+      ad corporis doloribus? In perferendis beatae, similique eaque, sapiente
+      molestiae quibusdam ea culpa ipsa, explicabo eligendi illum veniam aut
+      dolores impedit eos nostrum obcaecati?
+    </p>
+  </body>
+</html>
