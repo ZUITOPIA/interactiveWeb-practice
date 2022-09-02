@@ -1,0 +1,71 @@
+<!-- option + B : html browser 실행 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .box-container {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background: rgba(255, 255, 0, 0.7);
+      }
+      .box:hover {
+        transform: scale(2) rotate(25deg) skew(30deg) translate(30px, 10px);
+        /* scale(1)이 100% 이니까 scale(2)는 두 배로 커지게 됨 */
+        /* rotate(15deg)는 각도 15도 만큼 돌리기 */
+        /* skew(30deg)는 각도 30도 만큼 수평방향으로 비틀기 (skewY로 하면 수직방향으로 비틀기 가능) */
+        /* translate(30px, 10px)는 왼쪽에서 30px, 위에서 10px 만큼 이동 */
+        /* transform : 각각 박스에 대해서만 작동을 하기 때문에 주변 박스가 밀려나는 일 없이 작동 가능, 기본 중점은 정가운데 */
+        /* transform-origin: left top; */
+        /* 기본 중점이 왼쪽 위로 가도록 변경 */
+        transform-origin: 50% 50%;
+        /* 기본 중점 숫자로도 설정 가능 (50% 50%는 기본 값) */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transform</h1>
+    <p>
+      <!-- lorem 입력하면 자동 문장 생성 -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi amet nobis
+      pariatur magni temporibus maiores, neque dolores consequuntur corrupti?
+      Ex, tenetur suscipit? Tempore quae iusto necessitatibus facere, eaque rem
+      doloremque id itaque obcaecati excepturi adipisci minus aliquid quod
+      maiores, laborum recusandae cupiditate provident a asperiores
+      reprehenderit, esse temporibus. Amet laborum perspiciatis id tenetur sed
+      et magnam quasi, natus impedit minus obcaecati esse illo dolorem incidunt
+      in ipsam facilis omnis quae. Tenetur eaque repellendus quo adipisci, est
+      ad corporis doloribus? In perferendis beatae, similique eaque, sapiente
+      molestiae quibusdam ea culpa ipsa, explicabo eligendi illum veniam aut
+      dolores impedit eos nostrum obcaecati?
+    </p>
+    <div class="box-container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi amet nobis
+      pariatur magni temporibus maiores, neque dolores consequuntur corrupti?
+      Ex, tenetur suscipit? Tempore quae iusto necessitatibus facere, eaque rem
+      doloremque id itaque obcaecati excepturi adipisci minus aliquid quod
+      maiores, laborum recusandae cupiditate provident a asperiores
+      reprehenderit, esse temporibus. Amet laborum perspiciatis id tenetur sed
+      et magnam quasi, natus impedit minus obcaecati esse illo dolorem incidunt
+      in ipsam facilis omnis quae. Tenetur eaque repellendus quo adipisci, est
+      ad corporis doloribus? In perferendis beatae, similique eaque, sapiente
+      molestiae quibusdam ea culpa ipsa, explicabo eligendi illum veniam aut
+      dolores impedit eos nostrum obcaecati?
+    </p>
+  </body>
+</html>
