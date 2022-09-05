@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interactive Web</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .characters {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #fff000;
+      }
+      .ilbuni {
+        width: 100px;
+        cursor: pointer;
+      }
+      .characters .ilbuni {
+        display: inline-block;
+      }
+      .special {
+        border: 10px dashed red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="characters">
+      <div class="ilbuni a">
+        <img src="images/ilbuni_0.png" alt="일분이" />
+      </div>
+      <div class="ilbuni b">
+        <img src="images/ilbuni_1.png" alt="일분이" />
+      </div>
+      <div class="ilbuni c">
+        <img src="images/ilbuni_2.png" alt="일분이" />
+      </div>
+    </div>
+    <div class="ilbuni d">
+      <img src="images/ilbuni_3.png" alt="일분이" />
+    </div>
+
+    <script>
+      // DOM 연습
+      const ilbuni = document.querySelector(".ilbuni");
+      console.log(ilbuni); // ilbuni a 등장 (이유 : querySelector 사용하면 가장 앞에 있는 애 출력)
+      ilbuni.classList.add("special"); //  한 줄 다 차지하지 않고 ilbuni 1에만 테두리 생김
+      //   ilbuni.className.add("special"); // ilbuni 1 테두리 생기면서 한 줄 다 차지함
+      ilbuni.classList.remove("ilbuni"); // ilbuni a 의 특성이 다 사라지고 원래의 값만 남음
+      console.log(ilbuni);
+      ilbuni.classList.toggle("ilbuni"); // ilbuni a 작아짐
+      ilbuni.classList.toggle("ilbuni"); // ilbuni a 커짐
+      ilbuni.classList.toggle("ilbuni"); // ilbuni a 작아짐
+      const ilbuniA = document.querySelector(".a");
+      console.log(ilbuniA); // ilbuni a 등장
+      const ilbuniGroup = document.querySelectorAll(".ilbuni");
+      console.log(ilbuniGroup); // 배열 ilbuni 안에 a,b,c,d 존재
+      const b = document.querySelector(".characters .ilbuni:nth-child(2)");
+      console.log(b); // ilbuni b 등장
+
+      const char = document.querySelector(".characters");
+      char.setAttribute("data-id", 123); // data-id 라는 속성이 만들어지고 그 속성의 데이터로 123이 들어감
+      char.getAttribute("data-id"); // 123 등장
+
+      const charactersElem = document.querySelector(".characters");
+      charactersElem.appendChild(pElem); // charactersElem 자식으로 p태그 추가
+      charactersElem.removeChild(document.querySelector(".b")); // ilbuni b 제거
+    </script>
+  </body>
+</html>
