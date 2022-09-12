@@ -62,14 +62,14 @@
   <script>
     // 전역변수
     (function () {
-      const ilbuni = document.querySelector(".ilbuni.c");
-      const clickIlbuniHandler = () => {
-        ilbuni.classList.toggle("special");
+      const characters = document.querySelector(".characters");
+      const clickHandler = (e) => {
+        // console.log(this);
+        console.log(e.currentTarget);
+        // this 랑 e.currentTarget은 결국 이벤트가 등록되어있는 객체 (지금은 characters) 임
       };
-      // function clickIlbuniHandler() {
-      //   ilbuni.classList.toggle("special");
-      // }
-      ilbuni.addEventListener("click", clickIlbuniHandler);
+
+      characters.addEventListener("click", clickHandler);
     })(); // main 함수 간단하게 실행하는 법
   </script>
 </html>
